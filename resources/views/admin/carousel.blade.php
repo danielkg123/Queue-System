@@ -36,37 +36,31 @@
                 </tr>
             </thead>
             <tbody>
-    @forelse ($carousel as $index => $u)
-        <tr>
-            <td>{{ $u->id }}</td>
-            <td>
-                <a href="{{ asset('storage/' . $u->image_path) }}" download class="btn btn-sm btn-primary">
-                    Download File
-                </a>
-            </td>
-            <td>{{ $u->status }}</td>
-            <td>
-                <form action="{{ route('carousel.toggle-status', $u->id) }}" method="POST" class="d-inline">
-                    @csrf
-                    <button type="submit" class="btn btn-warning btn-sm">
-                        {{ $u->status === 'active' ? 'Deactivate' : 'Activate' }}
-                    </button>
-                </form>    
-                <form action="{{ route('carousel.delete', $u->id) }}" method="POST" class="d-inline delete-form">
-                    @csrf
-                    @method('DELETE')
-                    <button type="button" class="btn btn-danger btn-sm delete-button">Delete</button>
-                </form>
-            </td>
-        </tr
->
-    @empty
-        <tr>
-            <td colspan="5" class="text-center">No Carousels found.</td>
-        </tr>
-    @endforelse
-</tbody>
-
+                @forelse ($carousel as $index => $u)
+                    <tr>
+                        <td>{{ $u->id }}</td>
+                        <td>{{ $u->image_path }}</td>
+                        <td>{{ $u->status }}</td>
+                        <td>
+                        <form action="{{ route('carousel.toggle-status', $u->id) }}" method="POST" class="d-inline">
+                            @csrf
+                            <button type="submit" class="btn btn-warning btn-sm">
+                                {{ $u->status === 'active' ? 'Deactivate' : 'Activate' }}
+                            </button>
+                        </form>    
+                        <form action="{{ route('carousel.delete', $u->id) }}" method="POST" class="d-inline delete-form">
+                                @csrf
+                                @method('DELETE')
+                                <button type="button" class="btn btn-danger btn-sm delete-button">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="5" class="text-center">No Carousels found.</td>
+                    </tr>
+                @endforelse
+            </tbody>
         </table>
     </div>
 </div>
