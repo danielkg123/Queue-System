@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0D4E8C;
+  height: 100%;
+
+}
+
+p,h4,h1{
+  color: white;
+}
+
+.row {
+  flex: 1;
+}
+
+.box {
+  border: 2px solid white;
+  text-align: center;
+  padding: 40px;
+  height: 100%;
+  background-color: #0084ff;
+}
+
+.boxbottom{
+  border: 2px solid white;
+  text-align: center;
+  padding: 40px;
+  height: 600px;
+  background-color: #0084ff;
+}
+.textbottom {
+  padding-top:20px;
+  margin-bottom:50px;
+}
+
+
+.user-location {
+  font-size: 5rem; /* Adjust to your preferred size */
+  font-weight: bold; /* Ensure bold text */
+  line-height: 0; /* Maintain proper alignment */
+  color: white; /* Consistent text color */
+}
+
+
+.main-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.queue-number {
+  font-size: 11rem;
+  font-weight: bold;
+  color: white;
+}
+
+.banner {
+  text-align: center;
+  width: 50%; /* Container width */
+  height: 500px; /* Fixed height */
+  overflow: hidden; /* Ensures any overflowing part of the image is hidden */
+}
+
+.banner img {
+  width: 100%; /* Stretch to fill the container width */
+  height: 100%; /* Stretch to fill the container height */
+  object-fit: cover; /* Ensures the image fills the container proportionally */
+  
+}
+
+
+/* Carousel Image CSS */
+.carousel-inner img {
+  width: 108%; /* Stretch to fill the container width */
+  height: 460px; /* Fixed height */
+  object-fit: fill; /* Ensures the image fills the container proportionally */
+  object-position: center; /* Centers the image */
+  border: 2px solid white;
+}
+
+.fixed-banner {
+  width: 100%; /* Stretch to fill the container horizontally */
+  height: 170px; /* Fixed height */
+  object-fit: cover; /* Ensures the image fills the container and maintains proportions */
+  object-position: center; /* Centers the image */
+}
+
+a{
+  font-size: larger;
+}
